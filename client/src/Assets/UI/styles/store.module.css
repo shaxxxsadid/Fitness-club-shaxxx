@@ -1,0 +1,311 @@
+.container {
+    display: flex;
+    padding-top: 100px;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    color: white;
+}
+
+.container .list {
+    margin: 150px 0 0 200px;
+    font-size: 28px;
+}
+
+.list {
+    max-width: 700px;
+    width: 700px;
+}
+
+.listTitle {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 30px 15px;
+    border: 3px solid white;
+    width: 200px;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+ul .item {
+    position: relative;
+    margin-bottom: 15px;
+    cursor: pointer;
+    width: 300px;
+}
+
+ul .item.active::before {
+    left: -10px;
+    visibility: visible;
+    opacity: 1;
+}
+
+ul .item:hover::before {
+    opacity: 1;
+    visibility: visible;
+    left: -10px;
+    transition: 0.5s all linear;
+}
+
+ul .item::before {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 5px;
+    content: "";
+    border-left: 3px solid orange;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s all linear;
+}
+
+/* product */
+
+.productBox {
+    margin: 25px 0;
+    display: grid;
+    width: 1350px;
+    height: 750px;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 360px;
+    row-gap: 15px;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.productInfo img {
+    transition: all 0.3s linear;
+}
+
+.productInfo img:hover {
+    transition: all 0.3s linear;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
+    .container .list {
+        margin: 50px 0 0 20px;
+        font-size: 20px;
+    }
+
+    .list {
+        width: 50%;
+    }
+
+    .listTitle {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0 0 0px -20px;
+        border: 3px solid white;
+        width: 200px;
+        text-align: center;
+        padding: 10px 15px;
+    }
+
+    ul .item {
+        position: relative;
+        margin: 15px 0;
+        cursor: pointer;
+        width: 300px;
+    }
+
+    .productBox {
+        margin: 25px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .productInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+}
+@media screen and (max-width: 768px) and (min-width: 451px) {
+    .container {
+        width: 100vw;
+        min-height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
+    .container .list {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin: 50px 0 0 100px;
+        font-size: 20px;
+        width: 30%;
+    }
+
+    .container .list ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .listTitle {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0 0 0px 0px;
+        border: 3px solid white;
+        width: auto;
+        text-align: start;
+        padding: 10px 40px;
+    }
+
+    ul .item {
+        position: relative;
+        margin: 10px 0px;
+        cursor: pointer;
+        width: auto;
+        font-size: 26px;
+    }
+
+    .productBox {
+        margin: 25px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 350px);
+        width: 100%;
+        height: auto;
+    }
+
+    .productInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 100vw;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
+    .container .list {
+        margin: 50px 0 0 0px;
+        font-size: 20px;
+    }
+
+    .list {
+        width: 200px;
+    }
+
+    .listTitle {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0 0 0px 10px;
+        border: 3px solid white;
+        width: 200px;
+        text-align: center;
+        padding: 10px 15px;
+    }
+
+    ul .item {
+        position: relative;
+        margin: 15px 0 15px 25px;
+        cursor: pointer;
+        width: 200px;
+    }
+
+    .productBox {
+        margin: 25px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 400px);
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .productInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .container {
+        width: 100vw;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .container .list {
+        margin: 50px 0 0 0px;
+        font-size: 28px;
+    }
+
+    .list {
+        width: 200px;
+    }
+
+    .listTitle {
+        font-size: 32px;
+        font-weight: 600;
+        margin: 0 0 0px 10px;
+        border: 3px solid white;
+        width: 200px;
+        text-align: center;
+        padding: 10px 15px;
+    }
+
+    ul .item {
+        position: relative;
+        margin: 15px 0 15px 25px;
+        cursor: pointer;
+        width: 200px;
+    }
+
+    .productBox {
+        margin: 25px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 500px);
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .productInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+}

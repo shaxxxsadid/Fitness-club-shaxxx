@@ -1,0 +1,10 @@
+input {
+    margin-bottom: 25px;
+    padding: 15px;
+    height: 30px;
+    width: 100%;
+    font-size: 20px;
+    background: rgba(217, 217, 217, 0.8);
+    border: 3px solid #FFFFFF;
+    box-shadow: inset 2px 4px 4px rgba(0, 0, 0, 0.10);
+}

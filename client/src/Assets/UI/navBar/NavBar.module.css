@@ -1,0 +1,528 @@
+.navBarContainer {
+    background-color: white;
+    width: 1920px;
+    height: 100px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+
+.mobileMenu {
+    visibility: hidden;
+}
+
+.navBarContainer.notAuth {
+    justify-content: space-between;
+}
+
+.navLinks {
+    width: 600px;
+    margin: 0 0 0 150px;
+    position: relative;
+    display: flex;
+}
+
+.white {
+    background-color: white;
+}
+
+.logo {
+    margin: 0 0 0 210px;
+}
+
+.link {
+    text-decoration: none;
+    position: relative;
+    font-weight: 400;
+    font-size: 28px;
+    color: black;
+    margin-right: 50px;
+    opacity: 1;
+    transition: all 0.3s linear;
+}
+
+.link::after {
+    content: "";
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 100%;
+    left: 0;
+    top: 25px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+.link:hover {
+    opacity: 0.6;
+    transition: all 0.3s linear;
+}
+
+.link:hover::after {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(10px);
+    transition: all 0.3s linear;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    padding-left: 20px;
+    color: rgb(70, 70, 70);
+    transition: all 0.3s linear;
+}
+
+.item img {
+    margin-right: 20px;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 24px;
+    color: black;
+    margin: 0px 30px 0 00px;
+    width: 200px;
+}
+
+.btn {
+    display: flex;
+    margin: 0 15px 0 15px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.drop {
+    position: absolute;
+    top: 17px;
+    left: 95px;
+    cursor: pointer;
+    transition: all 0.3s linear 0.2s;
+}
+
+.link:hover~.drop,
+.info:hover+.drop {
+    opacity: 0.6;
+    transform: rotate(180deg);
+    transition: all 0.3s linear;
+}
+
+.link.item::after {
+    content: "";
+    visibility: hidden;
+}
+
+.info {
+    padding: 15px;
+    background-color: rgb(245, 245, 245);
+    top: 60px;
+    left: -120px;
+    position: absolute;
+    background-color: white;
+    font-size: 18px;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 10px white;
+    opacity: 0;
+    transition: all 0.3s linear 0.2s;
+    z-index: 1;
+}
+
+.link:hover~.info {
+    transition: all 0.3s linear;
+    visibility: visible;
+    opacity: 1;
+}
+
+.info:hover {
+    transition: all 0.3s linear;
+    visibility: visible;
+    opacity: 1;
+}
+
+.info ul li {
+    margin: 10px 0;
+    list-style: none;
+}
+
+.info ul li a.link {
+    opacity: 1;
+}
+
+.info ul li .item:hover {
+    color: black;
+    transition: all 0.3s linear;
+}
+
+@media screen and (max-width: 450px) {
+    .navBarContainer {
+        width: 100vw;
+        height: 100px;
+    }
+
+    .logo {
+        margin: 35px 0px 35px 15px;
+        height: 50px;
+    }
+
+    .mobileMenu {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        visibility: visible;
+        min-width: 150px;
+    }
+
+    .mobileMenu hr {
+        width: 40px;
+        height: 6px;
+        border: 0;
+        background-color: black;
+        border-radius: 10px;
+        opacity: 1;
+        transition: all 0s linear 0.2s;
+    }
+
+    .mobileMenu::after {
+        position: absolute;
+        content: "";
+        width: 34px;
+        border: 3px solid black;
+        border-radius: 5px;
+        top: 10px;
+        background-color: black;
+        transition: top 0.2s linear 0.2s, transform 0.2s linear;
+    }
+
+    .mobileMenu::before {
+        position: absolute;
+        content: "";
+        width: 34px;
+        border: 3px solid black;
+        border-radius: 5px;
+        top: -10px;
+        background-color: black;
+        transition: top 0.2s linear 0.2s, transform 0.2s linear;
+    }
+
+    .mobileMenu.mobActive::before {
+        top: 0px;
+        transform: rotateZ(45deg);
+        transition: top 0.2s linear, transform 0.2s linear 0.2s;
+    }
+
+    .mobileMenu.mobActive::after {
+        top: 0px;
+        transform: rotateZ(-45deg);
+        transition: top 0.2s linear, transform 0.2s linear 0.2s;
+    }
+
+    .mobileMenu.mobActive hr {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .navLinks {
+        visibility: hidden;
+        display: none;
+        opacity: 0;
+    }
+
+    .mobileMenu.mobActive~.navLinks {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        margin-left: 0;
+        opacity: 1;
+        top: 100px;
+
+    }
+
+    .mobileMenu.mobActive~.navLinks .link:nth-child(1)>span,
+    .mobileMenu.mobActive~.navLinks .link:nth-child(6)>span {
+        opacity: 0;
+        display: none;
+    }
+
+    .drop {
+        display: none;
+    }
+
+    .btn.btnMobile {
+        margin: 0;
+        position: absolute;
+        left: 200px;
+    }
+
+    .mobileMenu~.btn,
+    .mobileMenu~button {
+        visibility: hidden;
+        display: none;
+    }
+
+    .mobileMenu.mobActive~.btn {
+        visibility: visible;
+        position: absolute;
+        top: 610px;
+        z-index: 1;
+        left: 15vw;
+        display: block;
+    }
+
+    .mobileMenu.mobActive~button {
+        visibility: visible;
+        position: absolute;
+        top: 550px;
+        z-index: 1;
+        left: 30vw;
+        display: block;
+    }
+
+    .text {
+        visibility: hidden;
+    }
+
+    .link {
+        width: 50%;
+        margin: 0 0 25px 0;
+        font-size: 26px;
+        color: black;
+    }
+
+    .mobileMenu.mobActive~.navLinks .info {
+        width: 100vw;
+        opacity: 1;
+        visibility: visible;
+        top: 125px;
+        padding-top: 0;
+        left: 0px;
+        text-align: center;
+        padding-bottom: 145px;
+    }
+
+    .mobileMenu.mobActive~.navLinks .info .item {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 451px) {
+    .navBarContainer {
+        width: 100vw;
+        height: 100px;
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin: 35px;
+        height: 50px;
+    }
+
+    .mobileMenu {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        visibility: visible;
+        min-width: 150px;
+    }
+
+    .mobileMenu hr {
+        width: 40px;
+        height: 6px;
+        border: 0;
+        background-color: black;
+        border-radius: 10px;
+        opacity: 1;
+        transition: all 0s linear 0.2s;
+    }
+
+    .mobileMenu::after {
+        position: absolute;
+        content: "";
+        width: 34px;
+        border: 3px solid black;
+        border-radius: 5px;
+        top: 10px;
+        background-color: black;
+        transition: top 0.2s linear 0.2s, transform 0.2s linear;
+    }
+
+    .mobileMenu::before {
+        position: absolute;
+        content: "";
+        width: 34px;
+        border: 3px solid black;
+        border-radius: 5px;
+        top: -10px;
+        background-color: black;
+        transition: top 0.2s linear 0.2s, transform 0.2s linear;
+    }
+
+    .mobileMenu.mobActive::before {
+        top: 0px;
+        transform: rotateZ(45deg);
+        transition: top 0.2s linear, transform 0.2s linear 0.2s;
+    }
+
+    .mobileMenu.mobActive::after {
+        top: 0px;
+        transform: rotateZ(-45deg);
+        transition: top 0.2s linear, transform 0.2s linear 0.2s;
+    }
+
+    .mobileMenu.mobActive hr {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .navLinks {
+        visibility: hidden;
+        display: none;
+        opacity: 0;
+    }
+
+    .mobileMenu.mobActive~.navLinks {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        margin-left: 0;
+        opacity: 1;
+        top: 100px;
+
+    }
+
+    .mobileMenu.mobActive~.navLinks .link:nth-child(1)>span,
+    .mobileMenu.mobActive~.navLinks .link:nth-child(6)>span {
+        opacity: 0;
+        display: none;
+    }
+
+    .drop {
+        display: none;
+    }
+
+    .btn.btnMobile {
+        margin: 0;
+        position: absolute;
+        left: 225px;
+    }
+
+    .mobileMenu~.btn,
+    .mobileMenu~button {
+        visibility: hidden;
+        display: none;
+    }
+
+    .mobileMenu.mobActive~.btn {
+        visibility: visible;
+        position: absolute;
+        top: 630px;
+        z-index: 1;
+        left: 235px;
+        display: block;
+    }
+
+    .mobileMenu.mobActive~button {
+        visibility: visible;
+        position: absolute;
+        top: 570px;
+        z-index: 1;
+        left: 300px;
+        display: block;
+    }
+
+    .text {
+        visibility: hidden;
+        display: none;
+        opacity: 0;
+    }
+
+    .link {
+        width: 50%;
+        margin: 0 0 25px 0;
+        font-size: 26px;
+        color: black;
+    }
+
+    .mobileMenu.mobActive~.navLinks .info {
+        width: 100vw;
+        opacity: 1;
+        visibility: visible;
+        top: 125px;
+        padding-top: 0;
+        left: 0px;
+        text-align: center;
+        padding-bottom: 145px;
+    }
+
+    .mobileMenu.mobActive~.navLinks .info .item {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .navBarContainer {
+        width: 100vw;
+    }
+
+    .logo {
+        margin: 20px;
+        height: 50px;
+    }
+
+    .navLinks {
+        margin: 0;
+    }
+
+    .navLinks .link {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+    .text {
+        display: none;
+    }
+
+    .drop {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+
+    .navBarContainer {
+        width: 100vw;
+    }
+
+    .logo {
+        margin: 30px;
+        height: 50px;
+    }
+
+    .navLinks {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+}

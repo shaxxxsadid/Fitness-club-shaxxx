@@ -1,0 +1,38 @@
+.Pagination {
+    width: 100%;
+    display: inline-flex;
+    color: white;
+}
+
+.Pagination .PaginationItem {
+    font-size: 25px;
+    padding: 10px 20px;
+    border: 1px white solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.Pagination .PaginationItem:hover {
+    background-color: lightgray;
+    color: black;
+    transition: 0.3s all ease-in-out;
+}
+
+.Pagination .PaginationItem.active {
+    background-color: white;
+    color: black;
+    transition: 0.3s all ease-in-out;
+}
+
+@media screen and (max-width: 450px) {
+    .Pagination {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 451px) and (max-width: 768px) {
+    .Pagination {
+        padding: 0 0 15px 30px ;
+    }
+}

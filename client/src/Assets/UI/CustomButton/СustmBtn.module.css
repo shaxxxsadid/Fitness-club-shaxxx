@@ -1,0 +1,70 @@
+.mstmBtn {
+    color: black;
+    font-size: 14px;
+    background: transparent;
+    border: 3px solid black;
+    cursor: pointer;
+    margin: 0 5px;
+    height: 50px;
+    width: 150px;
+    font-size: 24px;
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 15px;
+}
+
+.mstmBtn[data-width = '2']{
+    width: 150px;
+}
+
+.mstmBtn[data-width = '2.5']{
+    width: 200px;
+}
+
+.mstmBtn[data-width = '3']{
+    width: 250px;
+}
+
+.mstmBtn[data-width = '3.5']{
+    width: 300px;
+}
+
+.mstmBtn[data-width = '4']{
+    width: 350px;
+}
+
+.mstmBtn[data-widthAnim = '1']:hover {
+    width: 125px;
+    transition: all 0.5s ease-in-out;
+    background-color: black;
+    color: white;
+}
+
+.mstmBtn[data-widthAnim = '2']:hover {
+    width: 200px;
+    transition: all 0.5s ease-in-out;
+    background-color: black;
+    color: white;
+}
+
+.mstmBtn[data-widthAnim = '3']:hover {
+    width: 300px;
+    transition: all 0.5s ease-in-out;
+    background-color: black;
+    color: white;
+}
+
+.mstmBtn[data-widthAnim = '4']:hover {
+    width: 400px;
+    transition: all 0.5s ease-in-out;
+    background-color: black;
+    color: white;
+}
+
+.mstmBtn[data-color = '1']{
+    color: black;
+    background-color: white;
+}
+
+.mstmBtn[data-color = '2']{
+    color: white;
+}

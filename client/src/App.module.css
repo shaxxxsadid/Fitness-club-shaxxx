@@ -1,0 +1,17 @@
+*{
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Roboto; /* Имя шрифта */
+    src: url(./Assets/fonts/Roboto/Roboto-Regular.ttf); /* Путь к файлу со шрифтом */
+   }
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}

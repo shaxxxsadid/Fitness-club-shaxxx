@@ -1,0 +1,82 @@
+.MyModal {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    visibility: hidden;
+    display: none;
+    min-width: 250px;
+    max-height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease-in-out;
+}
+
+.MyModal .content {
+    padding: 25px;
+    background: white;
+    border-radius: 16px;
+    min-width: 250px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.MyModal.active {
+    transition: all 0.5s ease-in-out;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hide {
+    visibility: hidden;
+}
+
+@media screen  and (min-width: 451px)and (max-width: 768px) {
+    .MyModal {
+        width: 100vw;
+        height: 100vh;
+    }
+    .MyModal .content {
+        overflow: scroll;
+    }
+}
+@media screen  and (min-width: 769px)and (max-width: 1024px) {
+    .MyModal {
+        min-width: 250px;
+    }
+
+    .MyModal .content {
+        padding: 25px;
+        background: white;
+        border-radius: 16px;
+        min-width: 250px;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-height: 600px;
+        overflow: scroll;
+    }
+    .MyModal .content input {
+        margin-bottom: 10px;
+    }
+    .MyModal .content select {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen  and (min-width: 1024px)and (max-width: 1440px) {
+    .MyModal {
+        margin-top: 100px;
+    }
+}

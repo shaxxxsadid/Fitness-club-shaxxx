@@ -1,0 +1,124 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    background-color: black;
+    height: 100%;
+    color: white;
+}
+
+.container .gridContainer {
+    display: grid;
+    width: 1200px;
+    grid-template-columns: repeat(3, 400px);
+}
+
+.container .Item {
+    background-color: white;
+    color: black;
+    width: 350px;
+    padding: 35px 15px 35px 35px;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.container .Item .ItemTariff {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.container .Item .ItemTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: lightcoral;
+}
+
+.container .Item ul {
+    margin: 15px 0 0 20px;
+    font-size: 15px;
+}
+
+.container .Item ul li {
+    margin-top: 5px;
+}
+
+.container .title {
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.container .subTitle {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100vw;
+    }
+
+    .container .gridContainer {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        grid-template-columns: 400px;
+        padding: 0 0 50px 50px;
+    }
+
+    .container .title {
+        font-weight: 600;
+        font-size: 30px;
+        margin: 0 50px;
+    }
+
+    .container .subTitle {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+    .container {
+        width: 100vw;
+    }
+
+    .container .gridContainer {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 385px);
+        padding-bottom: 50px;
+    }
+
+    .container .Item {
+       justify-self: center;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 100vw;
+    }
+
+    .container .gridContainer {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        grid-template-columns: repeat(2, 400px);
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .container {
+        width: 100vw;
+    }
+
+    .container .gridContainer {
+        width: 100%;
+        padding: 0 0 50px 150px;
+    }
+}

@@ -1,0 +1,32 @@
+.loader {
+    border: 5px white dashed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    animation: loading 5s linear infinite;
+}
+
+.loader .black{
+    border: 5px black dashed;
+}
+
+
+@keyframes loader {
+    0% {
+        stroke-dashoffset: 1280;
+        
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: rotateZ(0deg);
+        
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}

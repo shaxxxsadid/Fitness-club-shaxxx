@@ -1,0 +1,75 @@
+.container {
+    height: 500px;
+    width: 860px;
+    display: flex;
+    align-items: center;
+}
+
+.window {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.allItems {
+    height: 100%;
+    display: flex;
+    transition: all 0.4s ease-in-out;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 50px;
+    margin: 0 15px;
+    
+}
+
+.ellipses {
+    display: flex;
+    position: relative;
+    
+}
+
+.ellipses ul {
+    display: flex;
+    position: absolute;
+    width: 250px;
+    top: 270px;
+    left: -503px;
+}
+
+.ellipses li.ellipse{
+    background: rgba(217, 217, 217, 0.8);
+    width: 16px;
+    height: 16px;
+    list-style: none;
+    margin-right: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.ellipses li.ellipse:hover{
+    background: white;
+}
+
+.ellipses li.ellipse.active{
+    background: white;
+}
+
+@media screen and (width: 768px) {
+    .container {
+        height: 500px;
+        width: 768px;
+        display: flex;
+        align-items: center;
+    }
+
+    .ellipses ul {
+        display: flex;
+        position: absolute;
+        width: 250px;
+        top: 270px;
+        left: -425px;
+    }
+    
+}
